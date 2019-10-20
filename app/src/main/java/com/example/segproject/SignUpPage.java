@@ -90,14 +90,6 @@ public class SignUpPage extends AppCompatActivity {
                 databaseUsers.child(id).setValue(user);
 
                 startActivity(myIntent);
-            } else {
-                String id = databaseUsers.push().getKey();
-
-                Admin user = new Admin(id, firstName, lastName, role, username, email, hashPassword(password));
-
-                databaseUsers.child(id).setValue(user);
-
-                startActivity(myIntent);
             }
 
         } else {
