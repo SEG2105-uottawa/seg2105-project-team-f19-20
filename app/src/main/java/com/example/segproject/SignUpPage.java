@@ -24,6 +24,7 @@ public class SignUpPage extends AppCompatActivity {
     EditText editTextLastName;
     Spinner spinner;
     EditText editTextUsername;
+    EditText editTextEmail;
     EditText editTextPassword;
     Button buttonSignUp;
 
@@ -40,6 +41,7 @@ public class SignUpPage extends AppCompatActivity {
         editTextLastName = findViewById(R.id.LastName);
         spinner = findViewById(R.id.RoleSelector);
         editTextUsername = findViewById(R.id.Username);
+        editTextEmail = findViewById(R.id.Email);
         editTextPassword = findViewById(R.id.Password);
         buttonSignUp = findViewById(R.id.SignUpButton);
 
@@ -50,9 +52,6 @@ public class SignUpPage extends AppCompatActivity {
 
     public void signupClickHandler(View target) throws NoSuchAlgorithmException {
         addUser();
-        hashPassword("password");
-        Intent myIntent = new Intent(SignUpPage.this, LoginPage.class);
-        startActivity(myIntent);
     }
 
     public void addUser() throws NoSuchAlgorithmException {
@@ -60,15 +59,46 @@ public class SignUpPage extends AppCompatActivity {
         String lastName = editTextLastName.getText().toString().trim();
         String role = spinner.getSelectedItem().toString();
         String username = editTextUsername.getText().toString().trim();
+        String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
-        if(!TextUtils.isEmpty(firstName) || !TextUtils.isEmpty(lastName) || !TextUtils.isEmpty(username) || !TextUtils.isEmpty(password)) {
+        Intent myIntent = new Intent(SignUpPage.this, LoginPage.class);
 
-            String id = databaseUsers.push().getKey();
+        if(!TextUtils.isEmpty(firstName) && !TextUtils.isEmpty(lastName) && !TextUtils.isEmpty(username) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
 
-            User user = new User(id, firstName, lastName, role, username, hashPassword(password));
+            if(invalidName(firstName)) {
+                Toast.makeText(this, "Please enter a valid First Name", Toast.LENGTH_LONG).show();
+            } else if(invalidName(lastName)) {
+                Toast.makeText(this, "Please enter a valid Last Name", Toast.LENGTH_LONG).show();
+            } else if(invalidEmail(email)) {
+                Toast.makeText(this, "Please enter a valid Email", Toast.LENGTH_LONG).show();
+            }
 
-            databaseUsers.child(id).setValue(user);
+            else if(role.equals("Patient")) {
+                String id = databaseUsers.push().getKey();
+
+                Patient user = new Patient(id, firstName, lastName, role, username, email, hashPassword(password));
+
+                databaseUsers.child(id).setValue(user);
+
+                startActivity(myIntent);
+            } else if(role.equals("Employee")) {
+                String id = databaseUsers.push().getKey();
+
+                Employee user = new Employee(id, firstName, lastName, role, username, email, hashPassword(password));
+
+                databaseUsers.child(id).setValue(user);
+
+                startActivity(myIntent);
+            } else {
+                String id = databaseUsers.push().getKey();
+
+                Admin user = new Admin(id, firstName, lastName, role, username, email, hashPassword(password));
+
+                databaseUsers.child(id).setValue(user);
+
+                startActivity(myIntent);
+            }
 
         } else {
             Toast.makeText(this, "Please make sure all fields are filled", Toast.LENGTH_SHORT).show();
@@ -84,6 +114,14 @@ public class SignUpPage extends AppCompatActivity {
             hashedPassword += Integer.toHexString(b[i] & 0xff);
         }
         return hashedPassword;
+    }
+
+    public boolean invalidName(String str) {
+        return !str.matches("[a-zA-Z]+");
+    }
+
+    public boolean invalidEmail(String email) {
+        return !email.matches("^[0-9a-zA-Z.%_+-]+@[0-9a-zA-Z.-]+\\.[a-zA-Z]{2,8}$");
     }
 
 }

@@ -31,8 +31,8 @@ public class LoginPage extends AppCompatActivity {
 
         databaseUsers = FirebaseDatabase.getInstance().getReference().child("users");
 
-        editTextUsername = (EditText) findViewById(R.id.Username);
-        editTextPassword = (EditText) findViewById(R.id.Password);
+        editTextUsername = findViewById(R.id.Username);
+        editTextPassword = findViewById(R.id.Password);
 
     }
 

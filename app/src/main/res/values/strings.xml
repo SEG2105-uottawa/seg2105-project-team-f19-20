@@ -6,5 +6,6 @@
     <string name="FirstNamePlaceholder">First Name</string>
     <string name="LoginButton">Login</string>
     <string name="SignUpButton">Sign Up</string>
-    <string name="RolePlaceholder">Role</string>>
+    <string name="RolePlaceholder">Role</string>
+    <string name="EmailPlaceholder">Email</string>>
 </resources>
