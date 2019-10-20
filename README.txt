@@ -7,3 +7,9 @@ Members
 
 Thinh Hong
 8755572
+
+Kartik Singhal 
+300068088
+
+Milad Rezaee
+300069170
