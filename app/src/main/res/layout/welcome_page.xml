@@ -7,10 +7,19 @@
     tools:context=".WelcomePage">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Greeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="177dp"
+        android:layout_marginLeft="177dp"
+        android:layout_marginTop="259dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:layout_marginBottom="453dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="259dp" />
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
