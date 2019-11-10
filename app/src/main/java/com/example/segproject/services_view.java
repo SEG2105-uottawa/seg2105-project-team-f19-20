@@ -43,6 +43,8 @@ public class services_view extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services_view);
 
+        //from Lab 05 Firebase implementation
+
 
         databaseServices = FirebaseDatabase.getInstance().getReference("services");
 
@@ -66,6 +68,8 @@ public class services_view extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+
+        //from Lab 05 Firebase implementation
 
         databaseServices.addValueEventListener(new ValueEventListener() {
             @Override

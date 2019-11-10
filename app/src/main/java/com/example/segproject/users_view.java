@@ -43,6 +43,7 @@ public class users_view extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users_view);
 
+        //from Lab 05 Firebase implementation
 
         databaseUsers = FirebaseDatabase.getInstance().getReference("users");
 
@@ -66,6 +67,7 @@ public class users_view extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+        //from Lab 05 Firebase implementation
 
         databaseUsers.addValueEventListener(new ValueEventListener() {
             @Override
