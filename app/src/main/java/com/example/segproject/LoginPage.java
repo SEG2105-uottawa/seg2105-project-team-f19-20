@@ -50,13 +50,21 @@ public class LoginPage extends AppCompatActivity {
                     try {
                         if (data.child("username").getValue().equals(username) && data.child("password").getValue().equals(hashPassword(password))) {
                             //it exists
-                            String firstName = (String) data.child("firstName").getValue();
-                            String role = (String) data.child("role").getValue();
-                            Intent myIntent = new Intent(LoginPage.this, WelcomePage.class);
-                            myIntent.putExtra("firstName", firstName);
-                            myIntent.putExtra("role", role);
-                            startActivity(myIntent);
-                            found = true;
+                            String username = (String) data.child("username").getValue();
+
+                            if(username.equals("admin")) {
+                                Intent myIntent = new Intent(LoginPage.this, admin_page.class);
+                                startActivity(myIntent);
+                                found = true;
+                            } else {
+                                String firstName = (String) data.child("firstName").getValue();
+                                String role = (String) data.child("role").getValue();
+                                Intent myIntent = new Intent(LoginPage.this, WelcomePage.class);
+                                myIntent.putExtra("firstName", firstName);
+                                myIntent.putExtra("role", role);
+                                startActivity(myIntent);
+                                found = true;
+                            }
                         }
                     } catch (NoSuchAlgorithmException e) {
                         e.printStackTrace();

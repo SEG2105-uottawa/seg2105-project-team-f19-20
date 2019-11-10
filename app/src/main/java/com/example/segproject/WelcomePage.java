@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+
+import java.security.NoSuchAlgorithmException;
 
 public class WelcomePage extends AppCompatActivity {
 
@@ -25,6 +28,13 @@ public class WelcomePage extends AppCompatActivity {
         } else {
             greeting.setText("Welcome " + name + "! \nYou are logged in as an " + role);
         }
+
+    }
+    public void backClickHandler(View target) throws NoSuchAlgorithmException {
+
+        Intent myIntent = new Intent(WelcomePage.this, StartupPage.class);
+
+        startActivity(myIntent);
 
     }
 }

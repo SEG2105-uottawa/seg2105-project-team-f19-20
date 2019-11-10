@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WelcomePage"></activity>
+        <activity android:name=".dialogue_delete_user"></activity>
+        <activity android:name=".user_item" />
+        <activity android:name=".users_view" />
+        <activity android:name=".admin_page" />
+        <activity android:name=".dialogue_edit" />
+        <activity android:name=".service_item" />
+        <activity android:name=".add_service" />
+        <activity android:name=".services_view" />
+        <activity android:name=".WelcomePage" />
         <activity android:name=".LoginPage" />
         <activity android:name=".SignUpPage" />
         <activity android:name=".StartupPage">

@@ -22,4 +22,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:gravity="center"
+        android:onClick="backClickHandler"
+        android:text="Sign Out"
+        app:layout_constraintTop_toBottomOf="@+id/Greeting"
+        tools:layout_editor_absoluteX="161dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

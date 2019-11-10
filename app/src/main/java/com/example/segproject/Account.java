@@ -1,6 +1,6 @@
 package com.example.segproject;
 
-public abstract class Account {
+public class Account {
 
     private String userID;
     private String firstName;

@@ -4,4 +4,9 @@
         <item>Patient</item>
         <item>Employee</item>
     </string-array>
+    <string-array name="ServiceRoles">
+        <item>Nurse</item>
+        <item>Doctor</item>
+        <item>Staff</item>
+    </string-array>
 </resources>
