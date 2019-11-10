@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.segproject">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".dialogue_delete_user"></activity>
+        <activity android:name=".user_item" />
+        <activity android:name=".users_view" />
+        <activity android:name=".admin_page" />
+        <activity android:name=".dialogue_edit" />
+        <activity android:name=".service_item" />
+        <activity android:name=".add_service" />
+        <activity android:name=".services_view" />
+        <activity android:name=".WelcomePage" />
+        <activity android:name=".LoginPage" />
+        <activity android:name=".SignUpPage" />
+        <activity android:name=".StartupPage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
