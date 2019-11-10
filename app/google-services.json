@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "416920930281",
+    "firebase_url": "https://segproject-f8812.firebaseio.com",
+    "project_id": "segproject-f8812",
+    "storage_bucket": "segproject-f8812.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416920930281:android:b895ae7af8a449dd7aad78",
+        "android_client_info": {
+          "package_name": "com.example.segproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416920930281-vim0fqncrlipe970h49n8qj7vsrajg2e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.segproject",
+            "certificate_hash": "e5e7111db9276d7dcce7aa5f8567d166d32a47cd"
+          }
+        },
+        {
+          "client_id": "416920930281-4jscbamfi7t3ehrsk88cgikf254l5bmj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.segproject",
+            "certificate_hash": "adca6a634a9e1b5be52221bfae82e92c79daeef1"
+          }
+        },
+        {
+          "client_id": "416920930281-sbmdsc2rntkkb2i7keouvvoaa2i3i8ln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRiufyXWNGIHfB5lxfyo-Y_ByG7Y8DAmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416920930281-sbmdsc2rntkkb2i7keouvvoaa2i3i8ln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

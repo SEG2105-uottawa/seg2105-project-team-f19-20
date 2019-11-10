@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SEG Project</string>
+    <string name="PasswordPlaceholder">Password</string>
+    <string name="UsernamePlaceholder">Username</string>
+    <string name="LastNamePlaceholder">Last Name</string>
+    <string name="FirstNamePlaceholder">First Name</string>
+    <string name="LoginButton">Login</string>
+    <string name="SignUpButton">Sign Up</string>
+    <string name="RolePlaceholder">Role</string>
+    <string name="EmailPlaceholder">Email</string>>
+</resources>
