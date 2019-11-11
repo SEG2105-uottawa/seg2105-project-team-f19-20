@@ -1,6 +1,9 @@
 Link to GitHub repository
 https://github.com/SEG2105-uottawa/seg2105-project-team-f19-20
 
+Admin Login Info:
+  Username: admin
+  Password: 5T5ptQ
 
 Members
 
