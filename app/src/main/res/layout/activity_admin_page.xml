@@ -29,13 +29,5 @@
             android:onClick="manageUsersClickHandler"
             android:text="Manage Users" />
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:onClick="signOutClickHandler"
-            android:text="Sign Out" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

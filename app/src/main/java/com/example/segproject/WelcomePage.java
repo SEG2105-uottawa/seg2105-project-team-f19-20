@@ -30,11 +30,5 @@ public class WelcomePage extends AppCompatActivity {
         }
 
     }
-    public void backClickHandler(View target) throws NoSuchAlgorithmException {
 
-        Intent myIntent = new Intent(WelcomePage.this, StartupPage.class);
-
-        startActivity(myIntent);
-
-    }
 }

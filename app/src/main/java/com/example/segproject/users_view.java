@@ -60,8 +60,6 @@ public class users_view extends AppCompatActivity {
             }
         });
 
-
-
     }
     @Override
     protected void onStart() {
@@ -143,7 +141,7 @@ public class users_view extends AppCompatActivity {
 
         reference.removeValue();
 
-        Toast.makeText(getApplicationContext(), "User deleted", Toast.LENGTH_LONG).show();
+        Toast.makeText(users_view.this, "User deleted", Toast.LENGTH_LONG).show();
 
     }
     public void backClickHandler(View target) throws NoSuchAlgorithmException {
@@ -153,6 +151,5 @@ public class users_view extends AppCompatActivity {
         startActivity(myIntent);
 
     }
-
 
 }

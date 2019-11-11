@@ -50,9 +50,7 @@ public class LoginPage extends AppCompatActivity {
                     try {
                         if (data.child("username").getValue().equals(username) && data.child("password").getValue().equals(hashPassword(password))) {
                             //it exists
-                            String username = (String) data.child("username").getValue();
-
-                            if(username.equals("admin")) {
+                            if(isAdmin(username, password)) {
                                 Intent myIntent = new Intent(LoginPage.this, admin_page.class);
                                 startActivity(myIntent);
                                 found = true;
@@ -91,5 +89,9 @@ public class LoginPage extends AppCompatActivity {
             hashedPassword += Integer.toHexString(b[i] & 0xff);
         }
         return hashedPassword;
+    }
+
+    public boolean isAdmin(String username, String password) {
+        return (username.equals("admin") && password.equals("5T5ptQ"));
     }
 }

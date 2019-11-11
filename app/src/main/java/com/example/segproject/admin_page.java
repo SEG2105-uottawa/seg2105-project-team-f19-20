@@ -24,12 +24,4 @@ public class admin_page extends AppCompatActivity {
         startActivity(myIntent);
     }
 
-    public void signOutClickHandler(View target) {
-        Intent myIntent = new Intent(admin_page.this, StartupPage.class);
-        startActivity(myIntent);
-    }
-
-
-
-
 }
