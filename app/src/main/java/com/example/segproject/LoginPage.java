@@ -80,6 +80,11 @@ public class LoginPage extends AppCompatActivity {
         });
     }
 
+    public void backClickHandler(View target) {
+        Intent myIntent = new Intent(LoginPage.this, StartupPage.class);
+        startActivity(myIntent);
+    }
+
     public String hashPassword(String password) throws NoSuchAlgorithmException {
         String hashedPassword = "";
         MessageDigest md = MessageDigest.getInstance("SHA-256");

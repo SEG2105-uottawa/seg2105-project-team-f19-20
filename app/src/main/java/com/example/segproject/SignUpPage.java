@@ -50,6 +50,11 @@ public class SignUpPage extends AppCompatActivity {
         spinner.setAdapter(adapter);
     }
 
+    public void backClickHandler(View target) {
+        Intent myIntent = new Intent(SignUpPage.this, StartupPage.class);
+        startActivity(myIntent);
+    }
+
     public void signupClickHandler(View target) throws NoSuchAlgorithmException {
         addUser();
     }
