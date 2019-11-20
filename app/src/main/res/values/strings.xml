@@ -6,5 +6,15 @@
     <string name="FirstNamePlaceholder">First Name</string>
     <string name="LoginButton">Login</string>
     <string name="SignUpButton">Sign Up</string>
-    <string name="EmailPlaceholder">Email</string>>
+    <string name="EmailPlaceholder">Email</string>
+    <string name="manageServicesButton">Manage Services</string>
+    <string name="clinicInformationButton">Clinic Information</string>
+    <string name="insurancePaymentButton">Insurance/Payment Methods</string>
+    <string name="enterAddressLabel">Address</string>
+    <string name="enterPhoneLabel">Phone Number</string>
+    <string name="enterNameLabel">Clinic Name</string>
+    <string name="changeAddressButton">Change/Set Address</string>
+    <string name="changePhoneButton">Change/Set Phone Number</string>
+    <string name="changeNameButton">Change/Set Clinic Name</string>
+    <string name="clinicWorkHoursButton">Clinic Work Hours</string>>
 </resources>

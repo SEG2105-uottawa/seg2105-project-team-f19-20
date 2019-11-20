@@ -57,10 +57,18 @@ public class LoginPage extends AppCompatActivity {
                             } else {
                                 String firstName = (String) data.child("firstName").getValue();
                                 String role = (String) data.child("role").getValue();
-                                Intent myIntent = new Intent(LoginPage.this, WelcomePage.class);
-                                myIntent.putExtra("firstName", firstName);
-                                myIntent.putExtra("role", role);
-                                startActivity(myIntent);
+                                String id = (String) data.child("userID").getValue();
+
+                                if(role.equals("Employee")) {
+                                    Intent myIntent = new Intent(LoginPage.this, EmployeePage.class);
+                                    myIntent.putExtra("userID", id);
+                                    startActivity(myIntent);
+                                } else {
+                                    Intent myIntent = new Intent(LoginPage.this, WelcomePage.class);
+                                    myIntent.putExtra("firstName", firstName);
+                                    myIntent.putExtra("role", role);
+                                    startActivity(myIntent);
+                                }
                                 found = true;
                             }
                         }

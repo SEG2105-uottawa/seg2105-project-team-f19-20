@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dialogue_delete_user"></activity>
+        <activity android:name=".EmployeeClinicWorkHours"></activity>
+        <activity android:name=".EmployeeInsurancePayment" />
+        <activity android:name=".EmployeeClinicInformation" />
+        <activity android:name=".EmployeeManageServices" />
+        <activity android:name=".EmployeePage" />
+        <activity android:name=".dialogue_delete_user" />
         <activity android:name=".user_item" />
         <activity android:name=".users_view" />
         <activity android:name=".admin_page" />

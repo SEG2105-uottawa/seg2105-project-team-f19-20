@@ -53,6 +53,7 @@ public class services_view extends AppCompatActivity {
 
         services = new ArrayList<>();
 
+        //dialogue stuff
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int x, long y) {

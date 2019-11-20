@@ -17,6 +17,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class SignUpPage extends AppCompatActivity {
 
@@ -90,7 +94,19 @@ public class SignUpPage extends AppCompatActivity {
             } else if(role.equals("Employee")) {
                 String id = databaseUsers.push().getKey();
 
-                Employee user = new Employee(id, firstName, lastName, role, username, email, hashPassword(password));
+                Map<String, String> clinicInfo = new HashMap<>();
+
+                clinicInfo.put("address", "");
+                clinicInfo.put("phone", "");
+                clinicInfo.put("name", "");
+
+                List<String> insuranceProviders = new ArrayList<>();
+                List<String> paymentMethods = new ArrayList<>();
+
+                insuranceProviders.add("soccer");
+                paymentMethods.add("basketball");
+
+                Employee user = new Employee(id, firstName, lastName, role, username, email, hashPassword(password), clinicInfo, insuranceProviders, paymentMethods);
 
                 databaseUsers.child(id).setValue(user);
 
