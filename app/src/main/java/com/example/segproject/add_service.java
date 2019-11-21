@@ -82,8 +82,12 @@ public class add_service extends AppCompatActivity {
 
     }
     public boolean invalidName(String str) {
-        return !str.matches("[a-zA-Z]+");
+        //Retrieved regex expression from StackOverFlow
+        //Question title: Java Regex to Validate Full Name allow only Spaces and Letters
+
+        return !str.matches("^\\p{L}+[\\p{L}\\p{Z}\\p{P}]{0,}");
     }
+
     public void backClickHandler(View target) throws NoSuchAlgorithmException {
 
         Intent myIntent = new Intent(add_service.this, services_view.class);

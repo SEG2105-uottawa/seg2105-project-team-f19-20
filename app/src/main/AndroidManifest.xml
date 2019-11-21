@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EmployeeClinicWorkHours"></activity>
+        <activity android:name=".InsurancePaymentItem"></activity>
+        <activity android:name=".DialogueDeleteInsurancePayment" />
+        <activity android:name=".DialogueEditInsurancePayment" />
+        <activity android:name=".EmployeeClinicWorkHours" />
         <activity android:name=".EmployeeInsurancePayment" />
         <activity android:name=".EmployeeClinicInformation" />
         <activity android:name=".EmployeeManageServices" />

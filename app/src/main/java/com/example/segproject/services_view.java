@@ -69,7 +69,6 @@ public class services_view extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-
         //from Lab 05 Firebase implementation
 
         databaseServices.addValueEventListener(new ValueEventListener() {

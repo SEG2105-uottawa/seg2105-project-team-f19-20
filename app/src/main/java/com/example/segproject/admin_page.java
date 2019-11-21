@@ -24,4 +24,9 @@ public class admin_page extends AppCompatActivity {
         startActivity(myIntent);
     }
 
+    public void backClickHandler(View target) {
+        Intent myIntent = new Intent(admin_page.this, LoginPage.class);
+        startActivity(myIntent);
+    }
+
 }

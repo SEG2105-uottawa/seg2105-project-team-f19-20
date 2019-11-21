@@ -6,4 +6,161 @@
     android:layout_height="match_parent"
     tools:context=".EmployeeClinicWorkHours">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mondayLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Monday"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/currentMondayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="ex. 7am - 8pm"
+            android:inputType="textPersonName"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/changeMondayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-5dp"
+            android:onClick="changeMondayHoursClickHandler"
+            android:text="Change/Set Hours"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tuesdayLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Tuesday"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/currentTuesdayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="ex. 7am - 8pm"
+            android:inputType="textPersonName"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/changeTuesdayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-5dp"
+            android:onClick="changeTuesdayHoursClickHandler"
+            android:text="Change/Set Hours"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/wednesdayLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Wednesday"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/currentWednesdayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="ex. 7am - 8pm"
+            android:inputType="textPersonName"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/changeWednesdayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-5dp"
+            android:onClick="changeWednesdayHoursClickHandler"
+            android:text="Change/Set Hours"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/thursdayLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Thursday"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/currentThursdayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="ex. 7am - 8pm"
+            android:inputType="textPersonName"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/changeThursdayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-5dp"
+            android:onClick="changeThursdayHoursClickHandler"
+            android:text="Change/Set Hours"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/fridayLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Friday"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/currentFridayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="ex. 7am - 8pm"
+            android:inputType="textPersonName"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/changeFridayHours"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-5dp"
+            android:onClick="changeFridayHoursClickHandler"
+            android:text="Change/Set Hours"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

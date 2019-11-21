@@ -6,4 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".EmployeeManageServices">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/backButtonEmployeeServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="backClickHandler"
+            android:text="Back" />
+
+        <ListView
+            android:id="@+id/listServiceEmployee"
+            android:layout_width="match_parent"
+            android:layout_height="283dp">
+
+        </ListView>
+
+        <Spinner
+            android:id="@+id/servicesDropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/addServiceEmployee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:onClick="addServiceClickHandler"
+            android:text="Add Service" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

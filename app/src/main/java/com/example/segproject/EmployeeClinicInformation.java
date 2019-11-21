@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,40 +19,45 @@ import java.security.NoSuchAlgorithmException;
 
 public class EmployeeClinicInformation extends AppCompatActivity {
 
-    DatabaseReference databaseClinics;
+    DatabaseReference databaseUsers;
+    EditText currentAddress;
+    EditText currentPhone;
+    EditText currentName;
+
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_clinic_information);
 
-        final TextView currentAddress = (TextView) findViewById(R.id.currentAddress);
-        final TextView currentPhone = (TextView) findViewById(R.id.currentPhone);
-        final TextView currentName = (TextView) findViewById(R.id.currentName);
+        currentAddress = (EditText) findViewById(R.id.currentAddress);
+        currentPhone = (EditText) findViewById(R.id.currentPhone);
+        currentName = (EditText) findViewById(R.id.currentName);
 
         Intent myIntent = getIntent();
-        final String id = myIntent.getStringExtra("userID");
+        id = myIntent.getStringExtra("userID");
 
-        databaseClinics = FirebaseDatabase.getInstance().getReference().child("users");
+        databaseUsers = FirebaseDatabase.getInstance().getReference().child("users");
 
-        databaseClinics.addValueEventListener(new ValueEventListener() {
+        databaseUsers.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot data : dataSnapshot.getChildren()) {
                     if (data.child("userID").getValue().equals(id)) {
                         //it exists
                         if(data.child("clinicInfo").child("address").getValue().equals("")) {
-                            currentAddress.setText("Clinic address is currently empty.");
+                            currentAddress.setHint("Currently empty!");
                         } else {
                             currentAddress.setText((String) data.child("clinicInfo").child("address").getValue());
                         }
                         if(data.child("clinicInfo").child("phone").getValue().equals("")) {
-                            currentPhone.setText("Clinic phone number is currently empty.");
+                            currentPhone.setHint("Currently empty!");
                         } else {
                             currentPhone.setText((String) data.child("clinicInfo").child("phone").getValue());
                         }
                         if(data.child("clinicInfo").child("name").getValue().equals("")) {
-                            currentName.setText("Clinic name is currently empty.");
+                            currentName.setHint("Currently empty!");
                         } else {
                             currentName.setText((String) data.child("clinicInfo").child("name").getValue());
                         }
@@ -66,19 +73,55 @@ public class EmployeeClinicInformation extends AppCompatActivity {
     }
 
     public void changeAddressClickHandler(View target) {
-        Intent myIntent = new Intent(EmployeeClinicInformation.this, EmployeeManageServices.class);
-        startActivity(myIntent);
+        if(invalidAddress(currentAddress.getText().toString().trim())) {
+            Toast.makeText(getApplicationContext(), "Please enter a valid address.", Toast.LENGTH_SHORT).show();
+        } else {
+            databaseUsers.child(id).child("clinicInfo").child("address").setValue(currentAddress.getText().toString().trim());
+            Toast.makeText(getApplicationContext(), "Address changed", Toast.LENGTH_LONG).show();
+        }
     }
 
     public void changePhoneClickHandler(View target) {
-        Intent myIntent = new Intent(EmployeeClinicInformation.this, EmployeeManageServices.class);
-        startActivity(myIntent);
+        if(invalidPhoneNumber(currentPhone.getText().toString().trim())) {
+            Toast.makeText(getApplicationContext(), "Please enter a valid phone number.", Toast.LENGTH_SHORT).show();
+        } else {
+            databaseUsers.child(id).child("clinicInfo").child("phone").setValue(currentPhone.getText().toString().trim());
+            Toast.makeText(getApplicationContext(), "Phone number changed", Toast.LENGTH_LONG).show();
+        }
     }
 
     public void changeNameClickHandler(View target) {
-        Intent myIntent = new Intent(EmployeeClinicInformation.this, EmployeeManageServices.class);
-        startActivity(myIntent);
+        if(invalidName(currentName.getText().toString().trim())) {
+            Toast.makeText(getApplicationContext(), "Please enter a valid name.", Toast.LENGTH_SHORT).show();
+        } else {
+            databaseUsers.child(id).child("clinicInfo").child("name").setValue(currentName.getText().toString().trim());
+            Toast.makeText(getApplicationContext(), "Clinic name changed", Toast.LENGTH_LONG).show();
+        }
     }
 
+    public boolean invalidAddress(String str) {
+        //Retrieved regex expression from StackOverFlow
+        //Question title: Regular expression for address field validation
 
+        return !str.matches("\\d+\\s+([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z.]+)");
+    }
+
+    public boolean invalidPhoneNumber(String str) {
+        //Retrieved regex expression from StackOverFlow
+        //Question title: Java Regular Expressions to Validate phone numbers
+
+        return !str.matches("^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$");
+    }
+
+    public boolean invalidName(String str) {
+        //Retrieved regex expression from StackOverFlow
+        //Question title: Java Regex to Validate Full Name allow only Spaces and Letters
+
+        return !str.matches("^\\p{L}+[\\p{L}\\p{Z}\\p{P}]{0,}");
+    }
+
+    public void backClickHandler(View target) {
+        Intent myIntent = new Intent(EmployeeClinicInformation.this, EmployeePage.class);
+        startActivity(myIntent);
+    }
 }

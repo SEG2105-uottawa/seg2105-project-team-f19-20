@@ -15,7 +15,10 @@ public class EmployeePage extends AppCompatActivity {
     }
 
     public void manageServicesClickHandler(View target) {
-        Intent myIntent = new Intent(EmployeePage.this, EmployeeManageServices.class);
+        Intent myIntent = getIntent();
+        String id = myIntent.getStringExtra("userID");
+        myIntent = new Intent(EmployeePage.this, EmployeeManageServices.class);
+        myIntent.putExtra("userID", id);
         startActivity(myIntent);
     }
 
@@ -36,7 +39,15 @@ public class EmployeePage extends AppCompatActivity {
     }
 
     public void clinicWorkHoursClickHandler(View target) {
-        Intent myIntent = new Intent(EmployeePage.this, EmployeeClinicWorkHours.class);
+        Intent myIntent = getIntent();
+        String id = myIntent.getStringExtra("userID");
+        myIntent = new Intent(EmployeePage.this, EmployeeClinicWorkHours.class);
+        myIntent.putExtra("userID", id);
+        startActivity(myIntent);
+    }
+
+    public void backClickHandler(View target) {
+        Intent myIntent = new Intent(EmployeePage.this, LoginPage.class);
         startActivity(myIntent);
     }
 

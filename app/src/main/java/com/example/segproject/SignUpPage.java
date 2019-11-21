@@ -100,13 +100,20 @@ public class SignUpPage extends AppCompatActivity {
                 clinicInfo.put("phone", "");
                 clinicInfo.put("name", "");
 
+                Map<String, String> workHours = new HashMap<>();
+
+                workHours.put("Monday", "");
+                workHours.put("Tuesday", "");
+                workHours.put("Wednesday", "");
+                workHours.put("Thursday", "");
+                workHours.put("Friday", "");
+
                 List<String> insuranceProviders = new ArrayList<>();
                 List<String> paymentMethods = new ArrayList<>();
 
-                insuranceProviders.add("soccer");
-                paymentMethods.add("basketball");
+                List<String> services = new ArrayList<>();
 
-                Employee user = new Employee(id, firstName, lastName, role, username, email, hashPassword(password), clinicInfo, insuranceProviders, paymentMethods);
+                Employee user = new Employee(id, firstName, lastName, role, username, email, hashPassword(password), clinicInfo, insuranceProviders, paymentMethods, workHours, services);
 
                 databaseUsers.child(id).setValue(user);
 

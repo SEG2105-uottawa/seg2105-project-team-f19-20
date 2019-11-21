@@ -6,142 +6,99 @@
     android:layout_height="match_parent"
     tools:context=".EmployeeClinicInformation">
 
-    <Button
-        android:id="@+id/changeAddressButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginLeft="92dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="92dp"
-        android:layout_marginRight="92dp"
-        android:text="@string/changeAddressButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterAddressLabel" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/enterAddressLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="180dp"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="52dp"
-        android:text="@string/enterAddressLabel"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:translationX="-70dp"
-        app:layout_constraintEnd_toStartOf="@+id/currentAddress"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/backButtonEmployeeClinicInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="backClickHandler"
+            android:text="Back" />
 
-    <TextView
-        android:id="@+id/currentAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginRight="200dp"
-        android:layout_marginBottom="30dp"
-        android:text="TextView"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/changeAddressButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/enterAddressLabel"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.948" />
+        <TextView
+            android:id="@+id/enterAddressLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/enterAddressLabel"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/enterPhoneLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="120dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="70dp"
-        android:text="@string/enterPhoneLabel"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:translationX="-45dp"
-        app:layout_constraintEnd_toStartOf="@+id/currentPhone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/changeAddressButton" />
+        <EditText
+            android:id="@+id/currentAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="Currently empty!"
+            android:inputType="textPersonName" />
 
-    <TextView
-        android:id="@+id/currentPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginRight="150dp"
-        android:layout_marginBottom="29dp"
-        android:text="TextView"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/changePhoneButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/enterPhoneLabel"
-        app:layout_constraintTop_toBottomOf="@+id/changeAddressButton" />
+        <Button
+            android:id="@+id/changeAddressButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="changeAddressClickHandler"
+            android:text="@string/changeAddressButton" />
 
-    <Button
-        android:id="@+id/changePhoneButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="75dp"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
-        android:text="@string/changePhoneButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterPhoneLabel" />
+        <TextView
+            android:id="@+id/enterPhoneLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/enterPhoneLabel"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/enterNameLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="130dp"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="65dp"
-        android:text="@string/enterNameLabel"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:translationX="-55dp"
-        app:layout_constraintEnd_toStartOf="@+id/currentName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/changePhoneButton" />
+        <EditText
+            android:id="@+id/currentPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="Currently empty!"
+            android:inputType="textPersonName" />
 
-    <TextView
-        android:id="@+id/currentName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="165dp"
-        android:layout_marginRight="165dp"
-        android:layout_marginBottom="30dp"
-        android:text="TextView"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/changeNameButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/enterNameLabel"
-        app:layout_constraintTop_toBottomOf="@+id/changePhoneButton" />
+        <Button
+            android:id="@+id/changePhoneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="changePhoneClickHandler"
+            android:text="@string/changePhoneButton" />
 
-    <Button
-        android:id="@+id/changeNameButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="75dp"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
-        android:text="@string/changeNameButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterNameLabel" />
+        <TextView
+            android:id="@+id/enterNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/enterNameLabel"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/currentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="Currently empty!"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/changeNameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="changeNameClickHandler"
+            android:text="@string/changeNameButton" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
