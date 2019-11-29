@@ -82,7 +82,8 @@
             android:layout_gravity="center"
             android:onClick="signupClickHandler"
             android:text="@string/SignUpButton"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:background="@drawable/ellipse"/>
 
         <Button
             android:id="@+id/backButton"
@@ -91,7 +92,8 @@
             android:layout_marginTop="20sp"
             android:onClick="backClickHandler"
             android:text="Back"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:background="@drawable/ellipse"/>
 
     </LinearLayout>
 

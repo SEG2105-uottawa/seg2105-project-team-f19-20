@@ -16,15 +16,18 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
+            android:layout_marginTop="50dp"
             android:id="@+id/backButtonEmployeePage"
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:onClick="backClickHandler"
-            android:text="Back" />
+            android:text="Back"
+
+            android:background="@drawable/ellipse"/>
 
         <Button
             android:id="@+id/manageServices"
-            android:layout_width="wrap_content"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="130dp"
@@ -34,11 +37,12 @@
             android:layout_marginRight="131dp"
             android:layout_marginBottom="40dp"
             android:onClick="manageServicesClickHandler"
-            android:text="@string/manageServicesButton" />
+            android:text="@string/manageServicesButton"
+            android:background="@drawable/ellipse"/>
 
         <Button
             android:id="@+id/clinicInformation"
-            android:layout_width="129dp"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="122dp"
@@ -48,27 +52,30 @@
             android:layout_marginRight="123dp"
             android:layout_marginBottom="59dp"
             android:onClick="clinicInformationClickHandler"
-            android:text="@string/clinicInformationButton" />
+            android:text="@string/clinicInformationButton"
+            android:background="@drawable/ellipse"/>
 
         <Button
             android:id="@+id/insurancePayment"
-            android:layout_width="wrap_content"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="83dp"
             android:layout_marginTop="-20dp"
             android:layout_marginEnd="84dp"
             android:onClick="acceptedInsurancePaymentClickHandler"
-            android:text="@string/insurancePaymentButton" />
+            android:text="@string/insurancePaymentButton"
+            android:background="@drawable/ellipse"/>
 
         <Button
             android:id="@+id/clinicWorkHours"
-            android:layout_width="wrap_content"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
             android:onClick="clinicWorkHoursClickHandler"
-            android:text="@string/clinicWorkHoursButton" />
+            android:text="@string/clinicWorkHoursButton"
+            android:background="@drawable/ellipse"/>
 
     </LinearLayout>
 
