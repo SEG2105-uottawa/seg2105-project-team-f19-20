@@ -23,7 +23,6 @@ public class EmployeeClinicInformation extends AppCompatActivity {
     EditText currentAddress;
     EditText currentPhone;
     EditText currentName;
-
     String id;
 
     @Override

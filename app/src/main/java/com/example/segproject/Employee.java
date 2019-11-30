@@ -10,7 +10,6 @@ public class Employee extends Account {
     List<String> paymentMethods;
     Map<String, String> workHours;
     List<String> services;
-
     public Employee() {
 
     }
