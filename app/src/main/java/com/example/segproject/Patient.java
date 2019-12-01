@@ -12,6 +12,8 @@ public class Patient extends Account {
     DatabaseReference databaseUsers;
     int waitTime;
     List<EmployeeClinicInformation> listOfClinics;
+    int rateService;
+    int rateClinic.
     public Patient() {
 
     }
@@ -21,8 +23,10 @@ public class Patient extends Account {
     }
 
 
-    public int getWaitTime(){
-        return waitTime;
+    public int getWaitTime(){ return waitTime;
     }
+
+    public void rateService(int amount){}
+
 
 }
