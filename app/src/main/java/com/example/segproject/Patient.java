@@ -1,19 +1,19 @@
 package com.example.segproject;
 
-import android.os.Bundle;
 
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.List;
 
 public class Patient extends Account {
 
     DatabaseReference databaseUsers;
-    int waitTime;
-    List<EmployeeClinicInformation> listOfClinics;
+
     int rateService;
-    int rateClinic.
+    int rateClinic;
+    int waitTime;
+    int bookAppointment;
+    EmployeeClinicInformation searchAddress;
+    EmployeeClinicInformation searchHours:
+    EmployeeClinicInformation searchService;
     public Patient() {
 
     }
@@ -26,7 +26,17 @@ public class Patient extends Account {
     public int getWaitTime(){ return waitTime;
     }
 
-    public void rateService(int amount){}
+    public void rateService(int rating){
 
+    }
 
+    public void rateClinic(int rating){
+
+    }
+
+    [ublic EmployeeClinicInformation
+
+    public com.example.segproject.EmployeeClinicInformation getSearchAddress() {
+        return searchAddress;
+    }
 }

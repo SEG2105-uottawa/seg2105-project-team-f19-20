@@ -24,6 +24,7 @@ public class EmployeeClinicInformation extends AppCompatActivity {
     EditText currentPhone;
     EditText currentName;
     String id;
+    int rating;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,5 +123,9 @@ public class EmployeeClinicInformation extends AppCompatActivity {
     public void backClickHandler(View target) {
         Intent myIntent = new Intent(EmployeeClinicInformation.this, EmployeePage.class);
         startActivity(myIntent);
+    }
+
+    public int getRating(){
+        return rating;
     }
 }

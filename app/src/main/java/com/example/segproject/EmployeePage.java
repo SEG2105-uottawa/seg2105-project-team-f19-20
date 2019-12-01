@@ -51,4 +51,12 @@ public class EmployeePage extends AppCompatActivity {
         startActivity(myIntent);
     }
 
+    public void clinicRating(View target){
+        Intent myIntent = getIntent();
+        String id = myIntent.getStringExtra("userID");
+        myIntent = new Intent(EmployeePage.this, EmployeeClinicWorkHours.class);
+        myIntent.putExtra("userID", id);
+        startActivity(myIntent);
+    }
+
 }

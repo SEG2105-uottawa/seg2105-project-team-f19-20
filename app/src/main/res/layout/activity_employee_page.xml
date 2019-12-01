@@ -77,6 +77,15 @@
             android:text="@string/clinicWorkHoursButton"
             android:background="@drawable/ellipse"/>
 
+        <Button
+            android:id="@+id/clinicRating"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:onClick="clinicR"
+            android:text="clinic Rating" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
