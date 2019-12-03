@@ -20,10 +20,4 @@ Thinh Hong
 Matt Ignaczak
 8457172
 
-#Starts Here
-Build Status
-[![Build
-Status](https://circleci.com/gh/SEG2105-uottawa/seg2105-project-team-f19-20/ProductCatalog.png?branch=m
-aster)](https://circle
-ci.com/gh/SEG2105-uottawa/seg2105-project-team-f19-20/ProductCatalog)
-#Ends Here
+[![CircleCI](https://circleci.com/gh/SEG2105-uottawa/seg2105-project-team-f19-20.svg?style=svg)](https://circleci.com/gh/SEG2105-uottawa/seg2105-project-team-f19-20)
