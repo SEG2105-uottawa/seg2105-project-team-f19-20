@@ -21,7 +21,9 @@ Matt Ignaczak
 8457172
 
 
+
 #Starts Here
 Build Status
-[![CircleCI](https://circleci.com/gh/SEG2105-uottawa/seg2105-project-team-f19-20/tree/master.svg?style=svg&circle-token=eb8ba41a98e5ac4acfe79a4617ccd69c52c8653a)](https://circleci.com/gh/SEG2105-uottawa/seg2105-project-team-f19-20/tree/master)
+[![Build
+Status](https://circleci.com/gh/SEG2105-uottawa/seg2105-project-team-f19-20/tree/master.svg?style=svg&circle-token=eb8ba41a98e5ac4acfe79a4617ccd69c52c8653a)](https://circleci.com/gh/SEG2105-uottawa/seg2105-project-team-f19-20/tree/master)
 #Ends Here
