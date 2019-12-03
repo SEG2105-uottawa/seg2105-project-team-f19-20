@@ -20,4 +20,4 @@ Thinh Hong
 Matt Ignaczak
 8457172
 
-[![CircleCI](https://circleci.com/gh/SEG2105-uottawa/seg2105-project-team-f19-20/tree/master.svg?style=svg)](https://circleci.com/gh/SEG2105-uottawa/seg2105-project-team-f19-20/tree/master)
+[![CircleCI](https://circleci.com/gh/SEG2105-uottawa/seg2105-project-team-f19-20/tree/master.svg?style=svg&circle-token=814a5ba699c027c3979db6eec206585d7ef687a3)](https://circleci.com/gh/SEG2105-uottawa/seg2105-project-team-f19-20/tree/master)
