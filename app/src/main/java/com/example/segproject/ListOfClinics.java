@@ -50,86 +50,12 @@ public class ListOfClinics extends AppCompatActivity {
 
         listOfClinics = new ArrayList<>();
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int x, long y) {
-                EmployeeClinicInformation clinicInfo= listOfClinics.get(x);
-                dialogueBox(clinicInfo.
-            }
-        });
-
     }
     @Override
     protected void onStart() {
         super.onStart();
 
         //from Lab 05 Firebase implementation
-
-        databaseUsers.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                accounts.clear();
-
-                for(DataSnapshot accountSnapshot : dataSnapshot.getChildren()){
-
-                    Account account = accountSnapshot.getValue(Account.class);
-                    accounts.add(account);
-
-                }
-                user_item accountsAdapter = new user_item(users_view.this, accounts);
-                listView.setAdapter(accountsAdapter);
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                Toast.makeText(getApplicationContext(), databaseError.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-
-
-        });
-    }
-
-    private void dialogueBox(final String ID, String name, String role){
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        LayoutInflater inflater = getLayoutInflater();
-        View view = inflater.inflate(R.layout.activity_dialogue_delete_user, null);
-
-
-        final TextView currentRole = view.findViewById(R.id.userRole);
-
-        currentRole.setText(role);
-
-
-        TextView dialogTitle = new TextView(users_view.this);
-        dialogTitle.setText(name);
-        dialogTitle.setGravity(Gravity.CENTER);
-        dialogTitle.setTextSize(20);
-
-
-        builder.setView(view)
-                .setCustomTitle(dialogTitle)
-                .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-
-                        deleteUser(ID);
-                        dialog.dismiss();
-
-                    }
-                })
-                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.dismiss();
-
-                    }
-                });
-        AlertDialog dialogue = builder.create();
-        dialogue.show();
     }
 
 

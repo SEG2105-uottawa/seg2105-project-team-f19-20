@@ -20,6 +20,7 @@ import java.security.NoSuchAlgorithmException;
 public class EmployeeClinicInformation extends AppCompatActivity {
 
     DatabaseReference databaseUsers;
+    DatabaseReference databaseServices;
     EditText currentAddress;
     EditText currentPhone;
     EditText currentName;
@@ -34,7 +35,6 @@ public class EmployeeClinicInformation extends AppCompatActivity {
         currentAddress = (EditText) findViewById(R.id.currentAddress);
         currentPhone = (EditText) findViewById(R.id.currentPhone);
         currentName = (EditText) findViewById(R.id.currentName);
-
         Intent myIntent = getIntent();
         id = myIntent.getStringExtra("userID");
 
@@ -79,6 +79,7 @@ public class EmployeeClinicInformation extends AppCompatActivity {
     public String getPhone(){
         return currentAddress.getText().toString().trim();
     }
+
 
     public void changeAddressClickHandler(View target) {
         if(invalidAddress(currentAddress.getText().toString().trim())) {
