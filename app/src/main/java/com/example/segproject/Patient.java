@@ -34,7 +34,7 @@ public class Patient extends Account {
 
     }
 
-    [ublic EmployeeClinicInformation
+    public EmployeeClinicInformation
 
     public com.example.segproject.EmployeeClinicInformation getSearchAddress() {
         return searchAddress;
