@@ -34,7 +34,10 @@ public class Patient extends Account {
 
     }
 
-    public EmployeeClinicInformation
+    public EmployeeClinicInformation(Clinic clinic){
+
+        return com.example.segproject.EmployeeClinicInformation.clinic;
+    }
 
     public com.example.segproject.EmployeeClinicInformation getSearchAddress() {
         return searchAddress;
