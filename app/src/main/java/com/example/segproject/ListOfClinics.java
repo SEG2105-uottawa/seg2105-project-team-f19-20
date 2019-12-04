@@ -46,6 +46,7 @@ public class ListOfClinics extends AppCompatActivity {
 
         databaseUsers = FirebaseDatabase.getInstance().getReference("users");
 
+        
         listView = findViewById(R.id.Clinics);
 
         listOfClinics = new ArrayList<>();
