@@ -18,7 +18,6 @@ public class EmployeeClinicRating extends AppCompatActivity {
 
     int rating;
 
-    @overide
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.employee_clinic_work_hours);

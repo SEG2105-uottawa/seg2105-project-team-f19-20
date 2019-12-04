@@ -29,7 +29,9 @@
             android:layout_height="69dp"
             android:layout_gravity="center"
             android:layout_marginBottom="60px"
-            android:text="Address" />
+            android:onClick="searchAddressClickHandler"
+            android:text="@string/searchAddress" />
+
 
         <Button
             android:id="@+id/SearchHours"
@@ -37,13 +39,15 @@
             android:layout_height="81dp"
             android:layout_marginBottom="60px"
             android:gravity="center"
-            android:text="Hours" />
+            android:onClick="searchHoursClickHandler"
+            android:text="@string/searchHours" />
 
         <Button
             android:id="@+id/SearchServices"
             android:layout_width="158dp"
             android:layout_height="81dp"
             android:layout_marginBottom="60px"
-            android:text="Services" />
+            android:onClick="searchServiceClickHandler"
+            android:text="@string/searchServices" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

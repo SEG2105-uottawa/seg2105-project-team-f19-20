@@ -31,4 +31,9 @@ public class WelcomePage extends AppCompatActivity {
 
     }
 
+    public void startSearchClickHandler(View target) {
+        Intent myIntent;
+        myIntent = new Intent(WelcomePage.this, Search.class);
+        startActivity(myIntent);
+    }
 }

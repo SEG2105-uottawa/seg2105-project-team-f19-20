@@ -25,6 +25,14 @@
             android:id="@+id/Search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="searchForClinic"
             android:text="Search" />
+
+        <Button
+            android:id="@+id/BackAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="backClickHandler"
+            android:text="@string/goBack" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

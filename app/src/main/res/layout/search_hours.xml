@@ -32,5 +32,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Search" />
+
+        <Button
+            android:id="@+id/BackHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="backClickHandler"
+            android:text="@string/goBack" />
     </LinearLayout>
 </LinearLayout>

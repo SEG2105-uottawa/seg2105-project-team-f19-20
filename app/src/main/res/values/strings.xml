@@ -17,4 +17,9 @@
     <string name="changePhoneButton">Change/Set Phone Number</string>
     <string name="changeNameButton">Change/Set Clinic Name</string>
     <string name="clinicWorkHoursButton">Clinic Work Hours</string>>
+    <string name="startSearchingButton">Start Searching</string>
+    <string name="searchHours">Hours</string>
+    <string name="searchAddress">Address</string>
+    <string name="searchServices">Service</string>
+    <string name="goBack">Back</string>
 </resources>

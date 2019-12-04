@@ -14,6 +14,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Map;
+
 public class Patient extends Account {
 
     DatabaseReference databaseUsers;
@@ -23,7 +25,7 @@ public class Patient extends Account {
     int waitTime;
     int bookAppointment;
     EmployeeClinicInformation searchAddress;
-    EmployeeClinicInformation searchHours:
+    EmployeeClinicInformation searchHours;
     EmployeeClinicInformation searchService;
     public Patient() {
 
@@ -45,12 +47,15 @@ public class Patient extends Account {
 
     }
 
-    public EmployeeClinicInformation(Clinic clinic){
-
-        return EmployeeClinicInformation;
+    public com.example.segproject.EmployeeClinicInformation getSearchHours() {
+        return searchHours;
     }
 
     public com.example.segproject.EmployeeClinicInformation getSearchAddress() {
         return searchAddress;
+    }
+
+    public com.example.segproject.EmployeeClinicInformation getSearchService() {
+        return searchService;
     }
 }

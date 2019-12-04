@@ -46,10 +46,10 @@ public class EmployeePage extends AppCompatActivity {
         startActivity(myIntent);
     }
 
-    public void backClickHandler(View target) {
-        Intent myIntent = new Intent(EmployeePage.this, LoginPage.class);
-        startActivity(myIntent);
-    }
+        public void backClickHandler(View target) {
+            Intent myIntent = new Intent(EmployeePage.this, LoginPage.class);
+            startActivity(myIntent);
+        }
 
     public void clinicRating(View target){
         Intent myIntent = getIntent();

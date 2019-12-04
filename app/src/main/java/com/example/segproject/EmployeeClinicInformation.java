@@ -72,6 +72,14 @@ public class EmployeeClinicInformation extends AppCompatActivity {
         });
     }
 
+    public String getAddress(){
+        return currentAddress.getText().toString().trim();
+    }
+
+    public String getPhone(){
+        return currentAddress.getText().toString().trim();
+    }
+
     public void changeAddressClickHandler(View target) {
         if(invalidAddress(currentAddress.getText().toString().trim())) {
             Toast.makeText(getApplicationContext(), "Please enter a valid address.", Toast.LENGTH_SHORT).show();
