@@ -2,6 +2,17 @@ package com.example.segproject;
 
 
 import com.google.firebase.database.DatabaseReference;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Patient extends Account {
 
@@ -36,7 +47,7 @@ public class Patient extends Account {
 
     public EmployeeClinicInformation(Clinic clinic){
 
-        return com.example.segproject.EmployeeClinicInformation.clinic;
+        return EmployeeClinicInformation;
     }
 
     public com.example.segproject.EmployeeClinicInformation getSearchAddress() {
